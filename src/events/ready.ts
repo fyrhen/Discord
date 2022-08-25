@@ -9,7 +9,7 @@ export default (client: Client): void => {
 
         await client.application.commands.set(Commands);
         
-        console.log(`FiveStreak is running!`);
-	    client.user.setActivity('Flasherrada!');
+        console.log(`DiscordBOT is running!`);
+	    client.user.setActivity('Ping Pong!');
     });
 };

@@ -1,9 +1,9 @@
 import { Command } from "./command";
 import { Hello } from "./commands/hello";
-import { Invite } from "./commands/invite";
+import { Ping } from "./commands/ping";
 
 export const Commands: 
     Command[] = [
         Hello, 
-        Invite
+        Ping
     ];

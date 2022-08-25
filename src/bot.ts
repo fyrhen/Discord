@@ -1,4 +1,4 @@
-import { Client, ClientOptions } from "discord.js";
+import { Client, GatewayIntentBits } from "discord.js";
 import interactionCreate from "./events/interactionCreate";
 import ready from "./events/ready";
 require('dotenv').config();
@@ -7,7 +7,14 @@ require('console-stamp')(console, {
 });
 
 const client = new Client({
-    intents: []
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildIntegrations,
+        GatewayIntentBits.GuildVoiceStates,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
+    ]
 });
 
 ready(client);
